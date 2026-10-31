@@ -15,7 +15,7 @@ export default function Work({ onBack, onOpenCategory, isActive = false }) {
 
   useEffect(() => {
     let active = true;
-    loadPublishedCategories().then((items) => { if (active) setCategories(items); });
+    loadPublishedCategories({ includeVideos: true }).then((items) => { if (active) setCategories(items); });
     return () => { active = false; };
   }, []);
 
