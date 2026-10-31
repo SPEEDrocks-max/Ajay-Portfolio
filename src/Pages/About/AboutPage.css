@@ -1012,3 +1012,138 @@
   .about-specializations li p { font-size: 11px; }
   .about-footer { border-color: var(--about-rule); }
 }
+
+/* About tools: a compact orbit of overlapping logo tiles with a clear editorial panel. */
+.about-layer--tools {
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.82fr);
+  align-items: center;
+  gap: clamp(38px, 7vw, 112px);
+}
+
+.about-tools-left { width: 100%; padding-top: 0; }
+.about-tools-cloud-wrap {
+  width: min(100%, 520px);
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+.about-tools-cloud,
+.about-tools-cloud:hover,
+.about-tools-cloud:focus-visible,
+.about-tools-cloud.is-open {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  background: radial-gradient(circle, rgba(237, 16, 36, 0.075), transparent 67%);
+  transform: none;
+}
+.about-tools-cloud__items {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+}
+.about-tool,
+.about-tool--primary,
+.about-tool--secondary,
+.about-tools-cloud:hover .about-tool,
+.about-tools-cloud.is-open .about-tool {
+  position: absolute;
+  top: calc(50% + var(--tool-y));
+  left: calc(50% + var(--tool-x));
+  z-index: calc(1 + var(--tool-layer));
+  display: grid;
+  width: clamp(84px, 22%, 116px);
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 13px;
+  border: 1px solid rgba(244, 244, 244, 0.15);
+  border-radius: 25%;
+  background: linear-gradient(145deg, rgba(31, 31, 34, 0.96), rgba(14, 14, 16, 0.94));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42), inset 0 1px rgba(255, 255, 255, 0.07);
+  color: transparent;
+  font-size: 0;
+  transform: translate(-50%, -50%) rotate(var(--tool-tilt));
+  transition: box-shadow 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+.about-tools-cloud:hover .about-tool,
+.about-tools-cloud.is-open .about-tool { border-color: rgba(255, 255, 255, 0.3); }
+.about-tools-cloud .about-tool:hover {
+  z-index: 20;
+  border-color: rgba(237, 16, 36, 0.7);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.52), 0 0 28px rgba(237, 16, 36, 0.18);
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.08);
+}
+.about-tool img {
+  width: 76%;
+  height: 76%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.2));
+}
+.about-tools-empty {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: max-content;
+  max-width: 75%;
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 12px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.about-tools-heading { margin-top: -2px; }
+.about-specializations { align-self: center; max-width: 460px; }
+.about-specializations__eyebrow {
+  margin: 0 0 14px;
+  color: var(--about-accent);
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+.about-specializations h3 { margin: 0 0 20px; font-size: clamp(48px, 5.1vw, 70px); }
+.about-specializations__intro {
+  max-width: 410px;
+  margin: 0 0 23px;
+  color: var(--about-muted);
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.75;
+}
+.about-specializations__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
+.about-specializations__tags span {
+  padding: 8px 10px;
+  border: 1px solid var(--about-rule);
+  border-radius: 999px;
+  color: rgba(244, 244, 244, 0.72);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.045em;
+}
+.about-empty--specializations { margin-top: 0; padding-top: 14px; }
+
+@media (max-width: 900px) {
+  .about-layer--tools { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .about-tools-cloud-wrap { width: min(100%, 480px); }
+  .about-specializations { width: 100%; max-width: 620px; justify-self: center; }
+}
+
+@media (max-width: 540px) {
+  .about-layer--tools { gap: 24px; }
+  .about-tools-cloud-wrap { width: min(100%, 380px); }
+  .about-tool,
+  .about-tool--primary,
+  .about-tool--secondary,
+  .about-tools-cloud:hover .about-tool,
+  .about-tools-cloud.is-open .about-tool { width: 25%; padding: 10px; border-radius: 22%; }
+  .about-specializations h3 { margin-bottom: 16px; font-size: clamp(38px, 11vw, 52px); }
+  .about-specializations__intro { margin-bottom: 18px; font-size: 14px; }
+  .about-specializations__tags { gap: 6px; margin-bottom: 20px; }
+  .about-specializations__tags span { padding: 7px 8px; font-size: 7px; }
+}

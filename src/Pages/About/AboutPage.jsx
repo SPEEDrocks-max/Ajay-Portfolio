@@ -202,11 +202,19 @@ export default function AboutPage({ isActive = false, onBack, content: previewCo
               <div className="about-tools-cloud-wrap">
                 <div className="about-tools-cloud" aria-label="Uploaded software logos">
                   <div className="about-tools-cloud__items">
-                    {toolsWithLogos.map((tool) => (
-                      <span className="about-tool" key={tool.id || tool.name}>
-                        <img src={tool.logo} alt={tool.name} loading="lazy" decoding="async" />
-                      </span>
-                    ))}
+                    {toolsWithLogos.map((tool, index) => {
+                      const angle = (index / Math.max(toolsWithLogos.length, 1)) * Math.PI * 2 - Math.PI / 2;
+                      const radius = toolsWithLogos.length < 4 ? 25 : 30;
+                      const radiusVariation = [0, 3, -2, 2, -3][index % 5];
+                      const x = Math.cos(angle) * (radius + radiusVariation);
+                      const y = Math.sin(angle) * (radius + radiusVariation);
+                      return (
+                        <span className="about-tool" key={tool.id || tool.name} style={{ "--tool-x": `${x}%`, "--tool-y": `${y}%`, "--tool-tilt": `${[-7, 4, -3, 6, -5][index % 5]}deg`, "--tool-layer": index }}>
+                          <img src={tool.logo} alt={tool.name} loading="lazy" decoding="async" />
+                        </span>
+                      );
+                    })}
+                    {!toolsWithLogos.length && <p className="about-tools-empty">Add tool logos to build this orbit.</p>}
                   </div>
                 </div>
               </div>
@@ -217,7 +225,10 @@ export default function AboutPage({ isActive = false, onBack, content: previewCo
             </div>
 
             <aside className="about-specializations" aria-labelledby="about-specializations-title">
+              <p className="about-specializations__eyebrow">FROM FIRST CUT TO FINAL FRAME</p>
               <h3 id="about-specializations-title">{pageContent.specializationsTitle}</h3>
+              <p className="about-specializations__intro">I shape raw footage into clear, expressive stories—balancing pace, sound and visual detail from the first cut to the final frame.</p>
+              <div className="about-specializations__tags" aria-label="Creative focus areas"><span>STORY-LED EDITS</span><span>MOTION &amp; PACING</span><span>FINISHING DETAILS</span></div>
               {specializations.length ? (
                 <ol>
                   {specializations.map((item, index) => (
