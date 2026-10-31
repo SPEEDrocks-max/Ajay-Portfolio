@@ -1,0 +1,68 @@
+.category-card { min-width: 0; }
+
+.category-card__button {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: 0;
+  border-radius: 15px;
+  background: #121212;
+  color: var(--work-text, #f3f0e8);
+  text-align: left;
+  cursor: pointer;
+}
+
+.category-card__topline {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 11px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.category-card__identity { display: flex; min-width: 0; align-items: center; gap: 8px; }
+.category-card__index { color: var(--work-muted, #aaa9a3); font-weight: 400; }
+.category-card__dots { color: #777873; font-size: 12px; letter-spacing: 2px; }
+
+.category-card__image {
+  position: relative;
+  display: grid;
+  aspect-ratio: 1.42 / 1;
+  overflow: hidden;
+  place-items: center;
+  border-radius: 10px;
+  background: #232422;
+  isolation: isolate;
+}
+
+.category-card__image img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.category-card__image img { object-fit: cover; transition: transform 500ms cubic-bezier(.2,.7,.2,1); }
+.category-card__fallback { position: absolute; z-index: 0; inset: 0; background: #232422; }
+.category-card__arrow { position: absolute; right: 14px; bottom: 12px; color: #f3f0e8; font-size: 17px; opacity: 0; transform: translate(-4px, 4px); transition: opacity 180ms ease, transform 180ms ease; }
+.category-card__button:hover .category-card__image img,
+.category-card__button:focus-visible .category-card__image img { transform: scale(1.035); }
+.category-card__button:hover .category-card__arrow,
+.category-card__button:focus-visible .category-card__arrow { opacity: 1; transform: translate(0, 0); }
+.category-card__button:focus-visible { outline: 1px solid #f3f0e8; outline-offset: 4px; }
+
+@media (max-width: 700px) {
+  .category-card__button { padding: 6px; border-radius: 13px; }
+  .category-card__topline { min-height: 39px; font-size: 10px; }
+  .category-card__image { aspect-ratio: 1.55 / 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-card__image img,
+  .category-card__arrow { transition: none; }
+}

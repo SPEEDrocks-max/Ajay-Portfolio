@@ -1,0 +1,15 @@
+{
+  "id": "ai-videos",
+  "slug": "ai-videos",
+  "title": "AI Videos",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "7lyloynbyho", "title": "AI Video", "youtubeUrl": "https://www.youtube.com/watch?v=7LyloynByho", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "hmd", "title": "HMD", "provider": "googleDrive", "url": "https://drive.google.com/file/d/1FKwah07-LWgqOa_dCDmMFmlW1uO3ojMt/view?usp=sharing", "thumbnail": "https://drive.google.com/thumbnail?id=1FKwah07-LWgqOa_dCDmMFmlW1uO3ojMt&sz=w1280", "client": "", "year": "", "description": "" },
+    { "id": "decostyle", "title": "Decostyle", "provider": "googleDrive", "url": "https://drive.google.com/file/d/1oC05qqTkdk_1vvMdYD0bpcGvaR5FwcuD/view?usp=sharing", "thumbnail": "https://drive.google.com/thumbnail?id=1oC05qqTkdk_1vvMdYD0bpcGvaR5FwcuD&sz=w1280", "client": "", "year": "", "description": "" },
+    { "id": "bajaj-general-insurance", "title": "Bajaj General Insurance", "provider": "googleDrive", "url": "https://drive.google.com/file/d/13Y64W5sFPod4TiV51uQZrTV8ek7iLepe/view?usp=sharing", "thumbnail": "https://drive.google.com/thumbnail?id=13Y64W5sFPod4TiV51uQZrTV8ek7iLepe&sz=w1280", "client": "", "year": "", "description": "" },
+    { "id": "onida-google-drive", "title": "Onida — Google Drive Version", "provider": "googleDrive", "url": "https://drive.google.com/file/d/12De-to3azn3TvCV2vC6GFkVaNUUYzK2l/view?usp=sharing", "thumbnail": "https://drive.google.com/thumbnail?id=12De-to3azn3TvCV2vC6GFkVaNUUYzK2l&sz=w1280", "client": "", "year": "", "description": "" },
+    { "id": "tmb", "title": "TMB", "provider": "vimeo", "url": "https://vimeo.com/1150840402?fl=tl&fe=ec", "thumbnail": "https://vumbnail.com/1150840402_large.jpg", "client": "", "year": "", "description": "" }
+  ]
+}

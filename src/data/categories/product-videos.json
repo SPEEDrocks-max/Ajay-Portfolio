@@ -1,0 +1,10 @@
+{
+  "id": "product-videos",
+  "slug": "product-videos",
+  "title": "Product Videos",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "product-video-01", "title": "Product Video 01", "youtubeUrl": "https://youtu.be/7LyloynByho?si=zsF5Oj-QULvRjQDZ", "thumbnail": "", "client": "", "year": "", "description": "" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "animation-videos",
+  "slug": "animation-videos",
+  "title": "Animation Videos",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "animation-video-01", "title": "Animation Video 01", "youtubeUrl": "https://youtube.com/shorts/KaH_WOG023w", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "animation-video-02", "title": "Animation Video 02", "youtubeUrl": "https://youtu.be/aHEejmSBOlw", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "animation-video-03", "title": "Animation Video 03", "youtubeUrl": "https://youtu.be/4Snd5-0XHJ4", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "animation-1", "title": "Animation 1", "provider": "vimeo", "url": "https://vimeo.com/1150837556?fl=tl&fe=ec", "thumbnail": "https://vumbnail.com/1150837556_large.jpg", "client": "", "year": "", "description": "" },
+    { "id": "animation-2", "title": "Animation 2", "provider": "vimeo", "url": "https://vimeo.com/1150837924?fl=tl&fe=ec", "thumbnail": "https://vumbnail.com/1150837924_large.jpg", "client": "", "year": "", "description": "" }
+  ]
+}

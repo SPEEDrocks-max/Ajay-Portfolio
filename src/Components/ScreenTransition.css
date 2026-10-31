@@ -1,0 +1,116 @@
+.screen-transition {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  isolation: isolate;
+  background: #141312;
+}
+
+.screen-transition__incoming {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  height: 100%;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Once the intro clears, return the landing page to normal document flow.
+   The browser window then owns scrolling, which keeps wheel, trackpad and
+   scrollbar input working consistently after the transition. */
+.screen-transition--finished {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: visible;
+}
+
+.screen-transition--finished .screen-transition__incoming {
+  position: relative;
+  inset: auto;
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: visible;
+}
+
+.screen-transition__outgoing {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.screen-transition__mechanism {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.screen-transition__string-glow,
+.screen-transition__string,
+.screen-transition__grab-box,
+.screen-transition__inner-box,
+.screen-transition__corners {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.screen-transition__string-glow {
+  stroke: rgba(220, 215, 205, 0.2);
+  stroke-width: 7;
+}
+
+.screen-transition__string {
+  stroke: rgba(231, 228, 220, 0.78);
+  stroke-width: 1.55;
+  stroke-linecap: round;
+}
+
+.screen-transition__grab-box {
+  stroke: rgba(231, 228, 220, 0.74);
+  stroke-width: 0.9;
+}
+
+.screen-transition__inner-box {
+  stroke: rgba(195, 167, 122, 0.22);
+  stroke-width: 0.7;
+}
+
+.screen-transition__corners {
+  stroke: #c3a77a;
+  stroke-width: 1.35;
+}
+
+.screen-transition__anchor {
+  fill: #c3a77a;
+  stroke: rgba(231, 228, 220, 0.7);
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+}
+
+.screen-transition__grab-point {
+  fill: #141312;
+  stroke: #c3a77a;
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.screen-transition__box-dot {
+  fill: #d7b64b;
+  stroke: rgba(20, 19, 18, 0.75);
+  stroke-width: 0.7;
+  vector-effect: non-scaling-stroke;
+}

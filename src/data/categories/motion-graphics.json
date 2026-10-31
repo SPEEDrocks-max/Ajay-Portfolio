@@ -1,0 +1,11 @@
+{
+  "id": "motion-graphics",
+  "slug": "motion-graphics",
+  "title": "Motion Graphics",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "motion-graphic-01", "title": "Motion Graphic 01", "youtubeUrl": "https://youtu.be/5l_aOZgvEwA?si=RMIYaEBCe6meJIkz", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "motion-graphic-02", "title": "Motion Graphic 02", "youtubeUrl": "https://youtu.be/nElTRp7fTbs", "thumbnail": "", "client": "", "year": "", "description": "" }
+  ]
+}

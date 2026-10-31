@@ -1,0 +1,14 @@
+{
+  "id": "shows-interviews",
+  "slug": "shows-interviews",
+  "title": "Shows / Interviews",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "show-interview-01", "title": "Show / Interview 01", "youtubeUrl": "https://youtu.be/hmLwQYNJ9y4?si=G-paUsbj-FWc24Rt", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "show-interview-02", "title": "Show / Interview 02", "youtubeUrl": "https://youtu.be/XDcY5zx3To8", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "online-interview-1", "title": "Online Interview 1", "provider": "vimeo", "url": "https://vimeo.com/1123654303/a47707b911?share=copy&fl=cl&fe=ci", "thumbnail": "https://vumbnail.com/1123654303_large.jpg", "client": "", "year": "", "description": "" },
+    { "id": "online-interview-2", "title": "Online Interview 2", "provider": "vimeo", "url": "https://vimeo.com/1126750326/f4629ef5f3?share=copy&fl=cl&fe=ci", "thumbnail": "https://vumbnail.com/1126750326_large.jpg", "client": "", "year": "", "description": "" },
+    { "id": "online-interview-3", "title": "Online Interview 3", "provider": "vimeo", "url": "https://vimeo.com/1076406284/68650bd516?share=copy&fl=cl&fe=ci", "thumbnail": "https://vumbnail.com/1076406284_large.jpg", "client": "", "year": "", "description": "" }
+  ]
+}

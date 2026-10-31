@@ -1,0 +1,13 @@
+{
+  "id": "reels-shorts",
+  "slug": "reels-shorts",
+  "title": "Reels / Shorts",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "reel-short-01", "title": "Reel / Short 01", "youtubeUrl": "https://youtube.com/shorts/TsMoh4OQ4M0?si=b7LVH-cxV2BPSmF4", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "reel-short-02", "title": "Reel / Short 02", "youtubeUrl": "https://youtube.com/shorts/hNHtJ5j0iX0?si=MGz9y39xe1qopGnK", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "reel-1", "title": "Reel 1", "provider": "vimeo", "url": "https://vimeo.com/1153208167?share=copy&fl=sv&fe=ci", "thumbnail": "https://vumbnail.com/1153208167_large.jpg", "client": "", "year": "", "description": "" },
+    { "id": "reel-2", "title": "Reel 2", "provider": "vimeo", "url": "https://vimeo.com/1153211720?fl=tl&fe=ec", "thumbnail": "https://vumbnail.com/1153211720_large.jpg", "client": "", "year": "", "description": "" }
+  ]
+}

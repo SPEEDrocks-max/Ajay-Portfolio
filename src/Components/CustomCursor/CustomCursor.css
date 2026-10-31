@@ -1,0 +1,54 @@
+/* Hide native cursor only when custom cursor is active. */
+html.has-custom-cursor,
+html.has-custom-cursor body,
+html.has-custom-cursor body * {
+  cursor: none !important;
+}
+
+/* Keep text selection and editing usable. */
+html.has-custom-cursor input,
+html.has-custom-cursor textarea,
+html.has-custom-cursor [contenteditable="true"] {
+  cursor: text !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  width: 25px;
+  height: 33px;
+
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.custom-cursor__arrow {
+  display: block;
+  width: 25px;
+  height: 33px;
+
+  transform-origin: top left;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 20%));
+
+  transition: transform 180ms ease;
+}
+
+/* Tiny, smooth response over clickable elements. */
+.custom-cursor.is-hovering .custom-cursor__arrow {
+  transform: scale(1.08);
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none;
+  }
+
+  html.has-custom-cursor,
+  html.has-custom-cursor body,
+  html.has-custom-cursor body * {
+    cursor: auto !important;
+  }
+}

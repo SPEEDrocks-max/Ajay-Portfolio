@@ -1,0 +1,80 @@
+.company-strip {
+  position: relative;
+  grid-column: 1 / -1;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(18px, 2.4vw, 36px) 0 clamp(18px, 2.3vw, 34px);
+  border-block: 2px solid #f3f1ed;
+  background: #000;
+  color: #f3f1ed;
+}
+
+.company-strip__title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 clamp(14px, 2vw, 24px);
+  padding-inline: clamp(22px, 7vw, 132px);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: clamp(25px, 4vw, 58px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.company-strip__viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.company-strip__track {
+  display: flex;
+  width: max-content;
+  animation: company-strip-scroll 34s linear infinite;
+  will-change: transform;
+}
+
+.company-strip__group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  gap: clamp(50px, 8vw, 150px);
+  padding: 0 clamp(28px, 5.5vw, 104px);
+}
+
+.company-strip__logo {
+  display: grid;
+  width: clamp(112px, 12vw, 180px);
+  height: clamp(48px, 5vw, 64px);
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.company-strip__logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes company-strip-scroll {
+  to { transform: translateX(-50%); }
+}
+
+.company-strip__viewport:hover .company-strip__track,
+.company-strip__viewport:focus-within .company-strip__track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+  .company-strip { padding-block: 18px 22px; }
+  .company-strip__title { margin-bottom: 14px; padding-inline: 20px; font-size: 29px; }
+  .company-strip__group { gap: 42px; padding-inline: 25px; }
+  .company-strip__logo { width: 112px; height: 52px; }
+  .company-strip__track { animation-duration: 28s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-strip__track { animation: none; }
+  .company-strip__viewport { overflow-x: auto; }
+}

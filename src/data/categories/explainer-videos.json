@@ -1,0 +1,13 @@
+{
+  "id": "explainer-videos",
+  "slug": "explainer-videos",
+  "title": "Explainer Videos",
+  "description": "",
+  "thumbnail": "",
+  "videos": [
+    { "id": "explainer-video-01", "title": "Explainer Video 01", "youtubeUrl": "https://www.youtube.com/watch?v=_lJ7Knn2YFM", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "explainer-video-02", "title": "Explainer Video 02", "youtubeUrl": "https://www.youtube.com/watch?v=-z-k-Qk32No", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "explainer-video-03", "title": "Explainer Video 03", "youtubeUrl": "https://www.youtube.com/watch?v=FWI27zS6Yro", "thumbnail": "", "client": "", "year": "", "description": "" },
+    { "id": "explainer-video-04", "title": "Explainer Video 04", "youtubeUrl": "https://youtu.be/sHmlsopUP5M", "thumbnail": "", "client": "", "year": "", "description": "" }
+  ]
+}

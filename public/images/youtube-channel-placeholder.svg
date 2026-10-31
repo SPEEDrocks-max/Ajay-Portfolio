@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#242321"/>
+      <stop offset=".52" stop-color="#10100F"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="matrix(620 345 -340 610 116 10)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ed1024" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#ed1024" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r=".8" fill="#fff" fill-opacity=".17"/>
+      <circle cx="18" cy="17" r=".65" fill="#fff" fill-opacity=".13"/>
+      <circle cx="25" cy="8" r=".5" fill="#fff" fill-opacity=".12"/>
+      <circle cx="8" cy="25" r=".55" fill="#fff" fill-opacity=".11"/>
+    </pattern>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1280v720H0z"/>
+  <path fill="url(#light)" d="M0 0h1280v720H0z"/>
+  <path stroke="#fff" stroke-opacity=".13" d="M48 48h1184v624H48z"/>
+  <path stroke="#fff" stroke-opacity=".12" d="M80 80h1120v560H80z"/>
+  <path fill="#ED1024" d="M550 267c0-20 22-33 40-23l175 101c19 11 19 39 0 50L590 496c-18 10-40-3-40-24V267Z"/>
+  <path fill="url(#grain)" d="M0 0h1280v720H0z"/>
+</svg>
