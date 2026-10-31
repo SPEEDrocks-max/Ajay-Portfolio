@@ -1147,3 +1147,40 @@
   .about-specializations__tags { gap: 6px; margin-bottom: 20px; }
   .about-specializations__tags span { padding: 7px 8px; font-size: 7px; }
 }
+
+/* Keep the About footer identity, navigation and contact details aligned together. */
+.about-footer {
+  display: grid;
+  grid-template-columns: auto auto auto minmax(0, 1fr);
+  justify-content: initial;
+  gap: 12px clamp(18px, 3vw, 42px);
+}
+.about-footer > span,
+.about-footer > button { white-space: nowrap; }
+.about-footer .global-footer-content {
+  grid-column: 4;
+  width: 100%;
+  min-width: 0;
+  flex: initial;
+  justify-self: stretch;
+  padding-top: 0;
+  border-top: 0;
+}
+.about-footer .global-footer-content__contact,
+.about-footer .global-footer-content__links { min-width: 0; }
+.about-footer .global-footer-content__contact a { overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+  .about-footer {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 20px;
+    padding: 18px 20px;
+  }
+  .about-footer > span { grid-column: 1; white-space: normal; }
+  .about-footer > button { grid-column: 2; grid-row: 1 / span 2; justify-self: end; }
+  .about-footer .global-footer-content {
+    grid-column: 1 / -1;
+    padding-top: 12px;
+    border-top: 1px solid var(--about-rule);
+  }
+}
